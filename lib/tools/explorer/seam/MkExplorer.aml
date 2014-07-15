@@ -75,10 +75,12 @@ functor MkExplorer (Space : SPACE)
 		       
 	  fun process s = case s of
 			       nil   => ()
-			     | p::pr => process pr
-                                        handle e => (print ("Uncaught exception "^Exn.name e^"\n");
-					             print ("Message: "^Exn.message e^"\n");
-						     Exn.dumpTrace(Exn.currentPacket()))
+			     | p::pr => ((p ()
+                                          handle e => (print ("Uncaught exception "^Exn.name e^"\n");
+                                                       print ("Message: "^Exn.message e^"\n");
+					               Exn.dumpTrace(Exn.currentPacket())));
+                                         process pr)
+
 	  fun send p =
 	      let
 		  val newtail = Promise.promise ()
