@@ -76,6 +76,10 @@ struct
 		    (Test.test (fn w => t (wordToIntInf w)))
 	end
 
+    (* Github issue 6 - https://github.com/aliceml/aliceml/issues/6 *)
+    fun testToIntX_issue6 () =
+      Test.test (fn x => x = ~1073741824) (LargeWord.toIntX (LargeWord.<< (Word.toLarge 0wxc0, 0w24)))
+
     fun testFromInt () =
 	let
 	    fun t w = w = LargeWord.fromInt (LargeWord.toInt w)
@@ -277,6 +281,7 @@ struct
 			       ("fromLarge", testFromLarge),
 			       ("toInt", testToInt),
 			       ("toIntX", testToIntX),
+			       ("toIntX_issue6", testToIntX_issue6),
 			       ("fromInt", testFromInt),
 			       ("toLargeInt", testToLargeInt),
 			       ("toLargeIntX", testToLargeIntX),
