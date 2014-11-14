@@ -126,10 +126,10 @@ DEFINE1(Word32_toInt) {
 
 DEFINE1(Word32_toIntX) {
   DECLARE_WORD32(i, x0);
-  if (static_cast<s_int>(i) > static_cast<s_int>(MAX_VALID_INT) ||
-      static_cast<s_int>(i) < static_cast<s_int>(MIN_VALID_INT))
+  if (static_cast<s_int>(static_cast<int32_t>(i)) > static_cast<s_int>(MAX_VALID_INT) ||
+      static_cast<s_int>(static_cast<int32_t>(i)) < static_cast<s_int>(MIN_VALID_INT))
     RAISE(PrimitiveTable::General_Overflow);
-  RETURN_INT(i);
+  RETURN_INT(static_cast<int32_t>(i));
 } END
 
 DEFINE1(Word32_fromLargeInt) {
