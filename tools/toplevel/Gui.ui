@@ -581,6 +581,7 @@
               <object class="GtkToolButton" id="newbutton">
                 <property name="visible">True</property>
                 <property name="stock_id">gtk-new</property>
+                <property name="tooltip_text" translatable="yes">Create empty editor buffer</property>
                 <signal name="clicked" handler="on_new1_activate"/>
               </object>
               <packing>
@@ -592,6 +593,7 @@
               <object class="GtkToolButton" id="openbutton">
                 <property name="visible">True</property>
                 <property name="stock_id">gtk-open</property>
+                <property name="tooltip_text" translatable="yes">Load file to new editor buffer</property>
                 <signal name="clicked" handler="on_open1_activate"/>
               </object>
               <packing>
@@ -603,6 +605,7 @@
               <object class="GtkToolButton" id="revertbutton">
                 <property name="visible">True</property>
                 <property name="stock_id">gtk-revert-to-saved</property>
+                <property name="tooltip_text" translatable="yes">Reload current editor buffer from file</property>
                 <signal name="clicked" handler="on_revert1_activate"/>
               </object>
               <packing>
@@ -614,6 +617,7 @@
               <object class="GtkToolButton" id="savebutton">
                 <property name="visible">True</property>
                 <property name="stock_id">gtk-save</property>
+                <property name="tooltip_text" translatable="yes">Write current editor buffer to original file</property>
                 <signal name="clicked" handler="on_save1_activate"/>
               </object>
               <packing>
@@ -625,6 +629,7 @@
               <object class="GtkToolButton" id="saveasbutton">
                 <property name="visible">True</property>
                 <property name="stock_id">gtk-save-as</property>
+                <property name="tooltip_text" translatable="yes">Write current editor buffer to new file</property>
                 <signal name="clicked" handler="on_save_as1_activate"/>
               </object>
               <packing>
@@ -636,6 +641,7 @@
               <object class="GtkToolButton" id="closebutton">
                 <property name="visible">True</property>
                 <property name="stock_id">gtk-close</property>
+                <property name="tooltip_text" translatable="yes">Close current editor buffer</property>
                 <signal name="clicked" handler="on_close1_activate"/>
               </object>
               <packing>
@@ -655,6 +661,7 @@
               <object class="GtkToolButton" id="undobutton">
                 <property name="visible">True</property>
                 <property name="stock_id">gtk-undo</property>
+                <property name="tooltip_text" translatable="yes">Revert last action</property>
                 <signal name="clicked" handler="on_undo_activate"/>
               </object>
               <packing>
@@ -666,6 +673,7 @@
               <object class="GtkToolButton" id="cutbutton">
                 <property name="visible">True</property>
                 <property name="stock_id">gtk-cut</property>
+                <property name="tooltip_text" translatable="yes">Cut current selection to clipboard</property>
                 <signal name="clicked" handler="on_cut1_activate"/>
               </object>
               <packing>
@@ -677,6 +685,7 @@
               <object class="GtkToolButton" id="copybutton">
                 <property name="visible">True</property>
                 <property name="stock_id">gtk-copy</property>
+                <property name="tooltip_text" translatable="yes">Copy current selection to clipboard</property>
                 <signal name="clicked" handler="on_copy1_activate"/>
               </object>
               <packing>
@@ -688,6 +697,7 @@
               <object class="GtkToolButton" id="pastebutton">
                 <property name="visible">True</property>
                 <property name="stock_id">gtk-paste</property>
+                <property name="tooltip_text" translatable="yes">Insert clipboard content</property>
                 <signal name="clicked" handler="on_paste1_activate"/>
               </object>
               <packing>
@@ -699,6 +709,7 @@
               <object class="GtkToolButton" id="deletebutton">
                 <property name="visible">True</property>
                 <property name="stock_id">gtk-delete</property>
+                <property name="tooltip_text" translatable="yes">Delete current selection</property>
                 <signal name="clicked" handler="on_delete1_activate"/>
               </object>
               <packing>
@@ -710,6 +721,7 @@
               <object class="GtkToolButton" id="indentbutton">
                 <property name="visible">True</property>
                 <property name="stock_id">gtk-indent</property>
+                <property name="tooltip_text" translatable="yes">Increase indentation of selected lines</property>
                 <signal name="clicked" handler="on_indent_region_activate"/>
               </object>
               <packing>
@@ -721,6 +733,7 @@
               <object class="GtkToolButton" id="outdentbutton">
                 <property name="visible">True</property>
                 <property name="stock_id">gtk-unindent</property>
+                <property name="tooltip_text" translatable="yes">Decrease indentation of selected lines</property>
                 <signal name="clicked" handler="on_outdent_region_activate"/>
               </object>
               <packing>
@@ -740,6 +753,7 @@
               <object class="GtkToolButton" id="findbutton">
                 <property name="visible">True</property>
                 <property name="stock_id">gtk-find</property>
+                <property name="tooltip_text" translatable="yes">Search for text</property>
                 <signal name="clicked" handler="on_find_activate"/>
               </object>
               <packing>
@@ -751,6 +765,7 @@
               <object class="GtkToolButton" id="replacebutton">
                 <property name="visible">True</property>
                 <property name="stock_id">gtk-find-and-replace</property>
+                <property name="tooltip_text" translatable="yes">Search and replace text</property>
                 <signal name="clicked" handler="on_replace_activate"/>
               </object>
               <packing>
@@ -764,6 +779,7 @@
                 <property name="label" translatable="yes">Go to Line</property>
                 <property name="use_underline">True</property>
                 <property name="stock_id">gtk-jump-to</property>
+                <property name="tooltip_text" translatable="yes">Jump to line by number</property>
                 <signal name="clicked" handler="on_go_to_line_activate"/>
               </object>
               <packing>
@@ -777,6 +793,7 @@
                 <property name="label" translatable="yes">Go to Error</property>
                 <property name="use_underline">True</property>
                 <property name="stock_id">gtk-dialog-warning</property>
+                <property name="tooltip_text" translatable="yes">Jump to last error position</property>
                 <signal name="clicked" handler="on_jump_to_last_error_activate"/>
               </object>
               <packing>
@@ -798,6 +815,7 @@
                 <property name="label" translatable="yes">Feed Region</property>
                 <property name="use_underline">True</property>
                 <property name="stock_id">gtk-media-next</property>
+                <property name="tooltip_text" translatable="yes">Evaluate current selection or paragraph</property>
                 <signal name="clicked" handler="on_feedregion_activate"/>
               </object>
               <packing>
@@ -811,6 +829,7 @@
                 <property name="label" translatable="yes">Feed File</property>
                 <property name="use_underline">True</property>
                 <property name="stock_id">gtk-media-play</property>
+                <property name="tooltip_text" translatable="yes">Evaluate whole buffer</property>
                 <signal name="clicked" handler="on_feedfile_activate"/>
               </object>
               <packing>
@@ -824,6 +843,7 @@
                 <property name="label" translatable="yes">Compile File</property>
                 <property name="use_underline">True</property>
                 <property name="stock_id">gtk-execute</property>
+                <property name="tooltip_text" translatable="yes">Compile current editor buffer to component file</property>
                 <signal name="clicked" handler="on_compilefile_activate"/>
               </object>
               <packing>
@@ -837,6 +857,7 @@
                 <property name="label" translatable="yes">Interrupt</property>
                 <property name="use_underline">True</property>
                 <property name="stock_id">gtk-media-stop</property>
+                <property name="tooltip_text" translatable="yes">Abort current evaluation</property>
                 <signal name="clicked" handler="on_interrupt_activate"/>
               </object>
               <packing>
@@ -850,6 +871,7 @@
                 <property name="label" translatable="yes">Continue in Background</property>
                 <property name="use_underline">True</property>
                 <property name="stock_id">gtk-media-pause</property>
+                <property name="tooltip_text" translatable="yes">Put current evaluation into background by spawning a new thread</property>
                 <signal name="clicked" handler="on_background_activate"/>
               </object>
               <packing>
@@ -863,6 +885,7 @@
                 <property name="label" translatable="yes">Reset Environment</property>
                 <property name="use_underline">True</property>
                 <property name="stock_id">gtk-media-rewind</property>
+                <property name="tooltip_text" translatable="yes">Remove all previous declarations from interpreter environment</property>
                 <signal name="clicked" handler="on_reset_activate"/>
               </object>
               <packing>
@@ -876,6 +899,7 @@
                 <property name="label" translatable="yes">Clear I/O</property>
                 <property name="use_underline">True</property>
                 <property name="stock_id">gtk-clear</property>
+                <property name="tooltip_text" translatable="yes">Clear program I/O pane</property>
                 <signal name="clicked" handler="on_clear_io_activate"/>
               </object>
               <packing>
