@@ -31,7 +31,7 @@ void ByteCodeSpecializer::Init() {
 }
 
 
-bool ByteCodeSpecializer::Specialize(Closure *c) {
+void ByteCodeSpecializer::Specialize(Closure *c) {
   ByteConcreteCode *bcc = ByteConcreteCode::FromWordDirect(c->GetConcreteCode());
   TagVal *abstractCode = bcc->GetAbstractCode();
   
@@ -73,7 +73,7 @@ bool ByteCodeSpecializer::Specialize(Closure *c) {
 }
 
 
-bool ByteCodeSpecializer::RecordCall(Closure* c) {
+void ByteCodeSpecializer::RecordCall(Closure* c) {
   ConcreteCode *cc = ConcreteCode::FromWord(c->GetConcreteCode());
   
   if (cc != INVALID_POINTER && cc->GetInterpreter() == ByteCodeInterpreter::self) {

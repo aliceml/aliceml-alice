@@ -77,10 +77,12 @@ const char *HotSpotInterpreter::Identify() {
 u_int HotSpotInterpreter::GetFrameSize(StackFrame *sFrame) {
   Worker *worker = sFrame->GetWorker();
   if(worker == AbstractCodeInterpreter::self) {
-    AbstractCodeInterpreter::self->GetFrameSize(sFrame);
+    return AbstractCodeInterpreter::self->GetFrameSize(sFrame);
   } else {
     Error("wrong code state");
   }
+  // Never reached due to the Error call in the 'else' branch above.
+  return 0;
 }
 
 void HotSpotInterpreter::DumpFrame(StackFrame *sFrame, std::ostream& out) {

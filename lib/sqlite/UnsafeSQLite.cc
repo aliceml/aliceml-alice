@@ -135,7 +135,13 @@ DEFINE1(sql_step) {
   case SQLITE_MISUSE:
     RAISE(MakeSQLError(String::New("sqlite step error")));
     break;
+  default:
+    RAISE(MakeSQLError(String::New("sqlite step unhandled result code")));
+    break;
   }
+
+  // Never reached due to 'default' case above.
+  RETURN_INT(0);
 } END
 
 DEFINE1(sql_finalize) {
