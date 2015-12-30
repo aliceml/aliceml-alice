@@ -73,7 +73,7 @@ void ByteCodeSpecializer::Specialize(Closure *c) {
 }
 
 
-bool ByteCodeSpecializer::RecordCall(Closure* c) {
+void ByteCodeSpecializer::RecordCall(Closure* c) {
   ConcreteCode *cc = ConcreteCode::FromWord(c->GetConcreteCode());
   
   if (cc != INVALID_POINTER && cc->GetInterpreter() == ByteCodeInterpreter::self) {
