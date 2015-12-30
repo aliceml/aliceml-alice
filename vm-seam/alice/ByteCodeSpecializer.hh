@@ -24,7 +24,7 @@ private:
   
   static bool RecordCall(Closure *c);
   static bool CanBeSpecialized(ByteConcreteCode *bcc);
-  static bool Specialize(Closure *c);
+  static void Specialize(Closure *c);
   static void RemoveOldStats();
 
 public:

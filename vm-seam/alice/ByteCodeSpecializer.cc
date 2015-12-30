@@ -31,7 +31,7 @@ void ByteCodeSpecializer::Init() {
 }
 
 
-bool ByteCodeSpecializer::Specialize(Closure *c) {
+void ByteCodeSpecializer::Specialize(Closure *c) {
   ByteConcreteCode *bcc = ByteConcreteCode::FromWordDirect(c->GetConcreteCode());
   TagVal *abstractCode = bcc->GetAbstractCode();
   
