@@ -223,6 +223,9 @@ s_int AbstractCode::GetContinuationPos(instr instr) {
     default:
       Assert(false);
   }
+
+  // Never reached due to the Assert in the 'default' case above.
+  return -1;
 }
 
 
