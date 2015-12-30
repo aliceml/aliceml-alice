@@ -129,6 +129,7 @@ struct
           val nx' = if nx + tipW >= screenW then xleft else nx
           val ny' = if ny + tipH >= screenH then ytop else ny            
         in
+          Gtk.Widget.show tipLabel ;
           Gtk.signalDisconnect (tipWindow, Promise.future signalConnectionP) ;
           if nx <> nx' orelse ny <> ny'
             then Gtk.Window.move (tipWindow, nx', ny')
