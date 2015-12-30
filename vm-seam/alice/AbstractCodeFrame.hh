@@ -119,7 +119,7 @@ public:
   }
   
   static AbstractCodeFrame *New(Closure *closure) {
-    AbstractCodeFrame::New(AliceConcreteCode::FromWord(closure->GetConcreteCode()), closure);
+    return AbstractCodeFrame::New(AliceConcreteCode::FromWord(closure->GetConcreteCode()), closure);
   }
   
 #ifdef DEBUG_CHECK
