@@ -269,6 +269,9 @@ s_int AbstractCode::GetNumProgramPoints(instr instr) {
     default:
       Assert(false);
   }
+
+  // Never reached due to the Assert(false) in the default case above.
+  return -1;
 }
 
 
