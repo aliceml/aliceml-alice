@@ -447,6 +447,9 @@ const char *ByteCode::LookupName(ByteCodeInstr::instr ins) {
       Assert(false);
     }
   }
+
+  // Never reached due to the Assert in the 'default' case above.
+  return NULL;
 }
 
 
