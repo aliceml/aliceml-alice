@@ -27,4 +27,4 @@ Group is
     MkCodeGenPhase.aml
     MkBackendSeamCross.aml
     WORD8_BUFFER-sig.aml
-    Word8Buffer.aml
+    AliceWord8Buffer.aml

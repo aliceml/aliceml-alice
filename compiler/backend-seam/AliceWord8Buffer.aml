@@ -15,7 +15,7 @@ import structure Word8Vector from "../../lib/fundamental/Word8Vector"
 import structure Word8 from "../../lib/fundamental/Word8"
 import signature CHAR_BUFFER from "CHAR_BUFFER-sig"
 
-structure Word8Buffer :> WORD8_BUFFER =
+structure AliceWord8Buffer :> WORD8_BUFFER =
     struct
 	type t = Word8Array.array ref * int ref * int ref
 
