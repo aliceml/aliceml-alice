@@ -83,13 +83,13 @@ shift
 
 case "$mode" in
     makedepend)
-	exec seamtool ${verbose} makedepend "${gmpincludes}" -I"${includedir}" "$@"
+	exec seamtool ${verbose} makedepend "${gmpincludes}" -I"${includedir}" "$CFLAGS" "$@"
 	;;
     compile)
-	exec seamtool ${verbose} compile "${gmpincludes}" -I"${includedir}" "$@"
+	exec seamtool ${verbose} compile "${gmpincludes}" -I"${includedir}" "$CFLAGS" "$@"
 	;;
     compilec)
-	exec seamtool ${verbose} compilec "${gmpincludes}" -I"${includedir}" "$@"
+	exec seamtool ${verbose} compilec "${gmpincludes}" -I"${includedir}" "$CFLAGS" "$@"
 	;;
     link)
     if test -n "${alicedll}" ; then
